@@ -63,8 +63,10 @@ switch (+prompt('Введіть день тижня')){
         break;
     case 6:
         console.log('Вихідний');
+        break;
     case 7:
         console.log('Вихідний');
+        break;
     default:
         console.log('????')
 }
