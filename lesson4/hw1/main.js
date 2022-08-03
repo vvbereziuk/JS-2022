@@ -42,11 +42,11 @@ while (c < 20) {
 //
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 let lists = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul>`)
 for (const list of lists) {
-    document.write(`<ul>
-        <li>${list}</li>
-    </ul>`);
+    document.write(`<li>${list}</li>`)
 }
+document.write(`</ul>`)
 
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону  Зробити адекватну стилізацію
@@ -56,7 +56,7 @@ for (const list of lists) {
 //     <h3 class="product-title">TITLE. Price - PRICE</h3>
 // <img src="IMAGE" alt="" class="product-image">
 // </div>
-// Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкту
+// Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкт
 
 let products = [
     {
