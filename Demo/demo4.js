@@ -32,13 +32,7 @@ let numbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //     console.log(numbers [i]);
 // }
 // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
-i = 0;
-while (i < numbers.length) {
-    if (i % 2 !== 0 ) {
-        console.log(numbers[i]);
-    }
-    i++;
-}
+
 
 // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
@@ -56,8 +50,36 @@ while (i < numbers.length) {
 //
 //
 //
+
+let books = [
+    {
+        name: 'Harry Potter',
+        pages: 43,
+        author: ['Rolling'],
+        genre: ['Fanatasy', 'Sciense']
+    },
+    {
+        name: ' Potter',
+        pages: 153,
+        author: ['Collin', 'Rocky'],
+        genre: ['Drama']
+    },
+    {
+        name: '457 Farengeit',
+        pages: 233,
+        author: ['Kozyy', 'Gloover', 'Robert'],
+        genre: ['Detecive', 'Fantasy', 'Jokes']
+    },
+];
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
+let max = books[0];
+for (const book of books) {
+    if (book.pages>max.pages) {
+        max = book;
+    }
+}
+console.log(max);
 // - знайти книжку/ки з найбільшою кількістю жанрів
 // - знайти книжку/ки з найдовшою назвою
 // - знайти книжку/ки які писали 2 автори
