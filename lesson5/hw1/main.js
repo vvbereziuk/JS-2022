@@ -36,17 +36,16 @@ paragraph('Hola amigo!');
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 function listUl(l) {
     document.write(`<ul>`);
-    document.write(`<li>${l}</li>`,`<li>${l}</li>`,`<li>${l}</li>` )
+    document.write(`<li>${l}</li>`, `<li>${l}</li>`, `<li>${l}</li>`);
     document.write(`</ul>`)
 }
-listUl('Hola amogos!');
+listUl('Hola amigos!');
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість
 //li визначається другим аргументом, який є числовим (тут використовувати цикл)
 function list3(list) {
     document.write(`<ul>`)
     for (let i = 0; i < 3; i++) {
-        let listElement = list[i];
         document.write(`<li>${list}</li>`);
     }
     document.write(`</ul>`);
@@ -58,12 +57,15 @@ list3('Hola muchachos!');
 
 let arrayPrem = [-5, 0, 100, 'cool', 'peace', null, true];
 function arrP(lists) {
+    document.write(`<ul>`);
     for (const listEl of lists) {
-        document.write(`<ul>${listEl}</ul>`);
+        document.write(`<li>${listEl}</li>`);
     }
+    document.write(`</ul>`);
 }
 arrP(arrayPrem)
 
+()
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 let users = [
