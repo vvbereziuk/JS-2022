@@ -120,3 +120,34 @@
 //     return accamulate;
 // }, { spades:[], diamonds:[], hearts:[], clubs:[]})
 // console.log(mast);
+
+// - Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@),
+// наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру
+// (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
+// Протестувати на значеннях
+// someemail@gmail.com
+// someeMAIL@gmail.com
+// someeMAIL@i.ua
+// some.email@gmail.com
+
+// let checkEmail = (email) => {
+//     let emailArray = email.split('@');
+//     if (emailArray.length > 2){
+//         return false;
+//     }
+//     let [name, fullDomain] = emailArray;
+//     let [beforeDot, afterDot] = fullDomain.split('.');
+//     if (beforeDot.length < 2 || !afterDot || !name) {
+//         return false
+//     } return true
+// };
+//
+// console.log(checkEmail('someemail@gmail.com'));
+
+let arrs = [1, 34, 12, 8, -5, 7, 100, -6, 0];
+// let nums = arrs.map((value, index) => value * 3 * index);
+// console.log(nums);
+// let nums2 = arrs.filter((value, index) => index % 2);
+// console.log(nums2);
+// let reduce1 = arrs.reduce((accum, value) => [...accum, value * 2], []);
+// console.log(reduce1);
