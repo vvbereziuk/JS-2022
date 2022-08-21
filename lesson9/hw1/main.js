@@ -233,7 +233,7 @@ personsForm.append(personsAge, inputButton);
 personsForm.addEventListener('submit', (item) => {
     item.preventDefault();
     if (item.target.age.value < 18) {
-        alert('Вам менше 18 років, тому ви не можите перейти далі');
+        alert('Вам менше 18 років, тому ви не можете перейти далі');
     } else {
         alert('Вітаємо!');
     }
