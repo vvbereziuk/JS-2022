@@ -41,8 +41,20 @@ let simpsons = [
 for (const simpson of simpsons) {
     let divElement = document.createElement('div');
     divElement.classList.add('member');
-    divElement.innerText = (`${simpson.name} ${simpson.surname} ${simpson.age} ${simpson.info}`);
+
+    let h1 = document.createElement('h1');
+    h1.innerText = (`${simpson.name} ${simpson.surname} ${simpson.age}`);
+    h1.style.textAlign = 'center';
+    h1.style.background = 'silver';
+
+    let text = document.createElement('p');
+    text.innerText = simpson.info
+
+    let image = document.createElement('img');
+    image.src = simpson.photo;
+    divElement.append(h1, text, image);
     document.body.appendChild(divElement);
+
 }
 
 // Цикл в циклі
@@ -90,11 +102,13 @@ let coursesArray = [
 // Приклад структири знаходиться у файлі example.png
 for (const courses of coursesArray) {
     let coursesEl = document.createElement('course');
+
     let titleEl = document.createElement('h1');
     titleEl.innerText = courses.title;
 
     let monthEl = document.createElement('div');
     monthEl.innerText = courses.monthDuration;
+
     let hourEl = document.createElement('div');
     hourEl.innerText = courses.hourDuration;
 
@@ -104,10 +118,7 @@ for (const courses of coursesArray) {
         modulesItem.innerText = modulesElement;
         modulesEl.appendChild(modulesItem);
     }
-    coursesEl.appendChild(titleEl);
-    coursesEl.appendChild(monthEl);
-    coursesEl.appendChild(hourEl);
-    coursesEl.appendChild(modulesEl);
+    coursesEl.append(titleEl, monthEl, hourEl, modulesEl);
     document.body.appendChild(coursesEl);
 }
 
@@ -132,7 +143,13 @@ document.body.appendChild(division.cloneNode(true));
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
 
-
+let item = ['Main', 'Products', 'About us', 'Contacts']
+let menuItems = document.querySelectorAll('.menu')[0];
+for (const itemElement of item) {
+    newLi = document.createElement('li');
+    newLi.innerText = itemElement;
+    document.body.appendChild(newLi);
+}
 
 // - Є масив
 let coursesAndDurationArray = [
@@ -180,12 +197,48 @@ for (const coursesElement1 of coursesAndDurationArray1) {
     document.body.appendChild(divElement1);
 }
 
-//     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+//     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на
+//     кнопку зникав елемент з id="text".
+let div1 = document.createElement('div');
+let p1 = document.createElement('p');
+p1.id = 'text';
+p1.innerText = 'натиснувши на кнопку, елемент зникне';
+document.body.appendChild(div1);
+
+let button = document.createElement('button');
+button.innerText = 'Press me';
+button.addEventListener('click', () => {
+    p1.classList.toggle('false');
+});
+div1.append(p1, button);
+document.body.appendChild(div1);
 
 
-//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
-//
+//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати
+//     інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+let personsForm = document.createElement('form');
+personsForm.id = 'forma';
+document.body.appendChild(personsForm);
+
+let personsAge = document.createElement('input');
+personsAge.type = 'number';
+personsAge.name = 'age';
+personsAge.placeholder = 'Введіть ваш вік';
+
+let inputButton = document.createElement('button');
+inputButton.innerText = 'Перевірити';
+
+personsForm.append(personsAge, inputButton);
+
+personsForm.addEventListener('submit', (item) => {
+    item.preventDefault();
+    if (item.target.age.value < 18) {
+        alert('Вам менше 18 років, тому ви не можите перейти далі');
+    } else {
+        alert('Вітаємо!');
+    }
+});
+
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
