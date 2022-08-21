@@ -129,12 +129,15 @@ division.classList.add('wrap');
 division.classList.add('collapse');
 division.classList.add('alpha');
 division.classList.add('beta');
+
 // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
 division.style.background = 'gold';
 division.style.color = 'green';
 division.style.fontSize = '24px';
+
 // - додати цей блок в body.
 document.body.appendChild(division);
+
 // - клонувати його повністю, та додати клон в body.
 document.body.appendChild(division.cloneNode(true));
 
