@@ -203,23 +203,21 @@ for (const coursesElement1 of coursesAndDurationArray1) {
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на
 //     кнопку зникав елемент з id="text".
 let div1 = document.createElement('div');
-let p1 = document.createElement('p');
-p1.id = 'text';
-p1.innerText = 'натиснувши на кнопку, елемент зникне';
-document.body.appendChild(div1);
+div1.setAttribute('id', 'text');
+div1.innerText = 'Hola amigos';
 
-let button = document.createElement('button');
-button.innerText = 'Press me';
-button.addEventListener('click', () => {
-    p1.classList.toggle('false');
-});
-div1.append(p1, button);
-document.body.appendChild(div1);
+let buttonElement = document.createElement('button');
+buttonElement.innerText = 'Click';
+
+buttonElement.onclick = () => {
+    div1.style.display = 'none';
+};
+document.body.append(div1, buttonElement);
 
 
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати
 //     інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-let personsForm = document.createElement('form');
+    let personsForm = document.createElement('form');
 personsForm.id = 'forma';
 document.body.appendChild(personsForm);
 
@@ -245,3 +243,39 @@ personsForm.addEventListener('submit', (item) => {
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+let input1 = document.createElement('input');
+input1.setAttribute('placeholder', 'Enter name');
+let input2 = document.createElement('input');
+let input3 = document.createElement('input');
+
+let button1 = document.createElement('button');
+button1.innerText = 'Click';
+
+document.body.append(input1, input2, input3, button1);
+
+button1.addEventListener('click', function (){
+    let row = input1.value;
+    let column = input2.value;
+    let elem = input3.value;
+
+    let generator = (tr, td, text) => {
+
+        let htmlTableElement = document.createElement('table');
+        document.body.appendChild(htmlTableElement);
+
+        for (let i = 0; i < tr; i++) {
+            let tr = document.createElement('tr');
+            htmlTableElement.appendChild(tr);
+
+            for (let j = 0; j < td; j++) {
+                let td = document.createElement('td');
+                td.innerText = `${text}`;
+                tr.appendChild(td);
+
+            }
+        }
+
+    }
+    generator(row, column, elem);
+})
