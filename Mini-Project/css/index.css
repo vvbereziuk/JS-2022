@@ -1,0 +1,30 @@
+.divContainer{
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div_user{
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 15px;
+    width: 450px;
+    height: 100px;
+    border:  solid 4px;
+    background: #e89c0e;
+}
+
+.user_id{
+    text-align: center;
+    color: #16166e;
+    width: 100%;
+}
+
+.user_button{
+    background: silver;
+    border: solid 2px;
+    border-radius: 5px;
+    width: 75%;
+}
