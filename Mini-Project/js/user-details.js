@@ -9,16 +9,16 @@ let url = new URL(location.href);
 let id = url.searchParams.get('id');
 
 let userInfo = document.createElement('div');
-userInfo.className = 'user-info';
+userInfo.className = 'user_data';
 
 
 let divTitle = document.createElement('div');
-divTitle.className = 'title-info';
+divTitle.className = 'title_data';
 
-let header = document.createElement('h2');
-header.className = 'header';
-header.innerText = 'User information';
-userInfo.append(header);
+let titleH = document.createElement('h2');
+titleH.className = 'header';
+titleH.innerText = 'User information';
+userInfo.append(titleH);
 
 let divWrap = document.createElement('div');
 divWrap.className = 'wrap';
@@ -43,21 +43,21 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     )
 
     .then(resp =>
-    {let userPostsButton = document.createElement('button');
-        userPostsButton.className = 'posts-title';
-        userPostsButton.innerText = 'Post of current users';
-        userInfo.append(userPostsButton);
-        userPostsButton.onclick = function () {
+    {let userButton = document.createElement('button');
+        userButton.className = 'posts_title';
+        userButton.innerText = 'Post of current users';
+        userInfo.append(userButton);
+        userButton.onclick = function () {
             fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                 .then(response => response.json())
                 .then(titlePosts => {
                         for (const titlePost of titlePosts) {
                             let titlePostDiv = document.createElement('div');
-                            titlePostDiv.className = 'div-post';
+                            titlePostDiv.className = 'div_post';
 
-                            let pTitlePost = document.createElement('p');
-                            pTitlePost.className = 'p-post';
-                            pTitlePost.innerText = titlePost.title;
+                            let titleP = document.createElement('p');
+                            titleP.className = 'p_post';
+                            titleP.innerText = titlePost.title;
 
                             let titlePostBtn = document.createElement('button');
                             titlePostBtn.innerText = 'Post';
@@ -66,9 +66,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                             titlePostBtn.onclick = function () {
                                 document.location.href = `post-details.html?postId=${titlePost.id}`;
                             }
-                            titlePostDiv.append(pTitlePost,titlePostBtn);
+                            titlePostDiv.append(titleP,titlePostBtn);
                             divTitle.append(titlePostDiv);
-                            userPostsButton.disabled = true;
+                            userButton.disabled = true;
                         }
                     }
                 )

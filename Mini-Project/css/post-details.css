@@ -1,37 +1,40 @@
+.wrap {
+    padding: 20px;
+}
 
 .head_post {
     background: silver;
     border: solid 3px;
-    width: 90%;
     border-radius: 15px;
+    margin: 20px;
     padding: 10px;
-    margin: 10px;
-
+    width: 1300px;
 }
-.post-title{
+
+.post_title {
     text-align: left;
 }
 
-.post-body {
+.post_body {
     text-align: justify;
 }
 
-.head_comments{
+.comment_title, .comment_mai {
+    height: 15%;
+}
+
+.head_comments {
     display: flex;
     flex-wrap: wrap;
 }
 
 .comments {
     background: orange;
-    margin: 10px;
-    border: solid 3px;
-    border-radius: 10px;
-    width: 20%;
+    margin: 20px;
     padding: 10px;
+    border-radius: 10px;
+    border: solid 3px;
+    width: 20%;
     height: 300px;
-
 }
 
-.comment-name, .comment-email{
-    height: 15%;
-}

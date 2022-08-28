@@ -9,6 +9,7 @@
     text-align: center;
     justify-content: center;
     border-radius: 15px;
+    padding: 20px;
     margin: 15px;
     width: 450px;
     height: 100px;
@@ -16,7 +17,7 @@
     background: #e89c0e;
 }
 
-.user_id{
+.div_id{
     text-align: center;
     color: #16166e;
     width: 100%;
@@ -25,6 +26,7 @@
 .user_button{
     background: silver;
     border: solid 2px;
-    border-radius: 5px;
+    border-radius: 10px;
+    height: 30px;
     width: 75%;
 }

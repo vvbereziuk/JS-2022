@@ -8,64 +8,51 @@ let postId = url.searchParams.get('postId');
 
 let divWrap = document.createElement('div');
 divWrap.className = 'wrap';
+
+let divPost = document.createElement('div');
+divPost.className = 'head_post';
+
+let wrapComments = document.createElement('div');
+wrapComments.className = 'head_comments';
+
+divWrap.append(divPost, wrapComments);
 document.body.appendChild(divWrap);
 
-let divWrapPost = document.createElement('div');
-divWrapPost.className = 'head_post';
-
-let divWrapComments = document.createElement('div');
-divWrapComments.className = 'head_comments';
-
-divWrap.append(divWrapPost, divWrapComments);
-
 fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(posts => posts.forEach(posts=>
-        {
-            if (postId === (posts.id+"")) {
-                // let postDiv = document.createElement('div');
-                // postDiv.className = 'post';
+    .then(value => value.json())
+    .then(posts => posts.forEach(posts => {
+            if (postId === (posts.id + "")) {
+                let postH = document.createElement('h2');
+                postH.className = 'post_title';
 
-                let postH3 = document.createElement('h2');
-                postH3.className = 'post-title';
+                let postP = document.createElement('p');
+                postP.className = 'post_body';
+                postH.innerText = `${posts.id}     ${posts.title}`;
+                postP.innerText = `${posts.body}`;
 
-                let postP2 = document.createElement('p');
-                postP2.className = 'post-body';
-
-                postH3.innerText = `${posts.id}     ${posts.title}`;
-                postP2.innerText = `${posts.body}`;
-
-                divWrapPost.append(postH3, postP2);
-                // document.body.append(postDiv);
-                // divWrapPost.append(postDiv);
+                divPost.append(postH, postP);
             }
-
         }
-
     ))
 
-    .then(resp=>
+    .then(resp =>
         fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-            .then(response => response.json())
-            .then(comments => comments.forEach(comments=>
-            {
+            .then(value => value.json())
+            .then(comments => comments.forEach(comments => {
                 let divComments = document.createElement('div');
                 divComments.className = 'comments';
 
-                let h3CommentName = document.createElement('h3');
-                h3CommentName.className = 'comment-name';
-                h3CommentName.innerText = `${comments.name}`;
+                let commentH = document.createElement('h3');
+                commentH.className = 'comment_title';
+                commentH.innerText = `${comments.name}`;
 
-                let h4CommentEmail = document.createElement('h4');
-                h4CommentEmail.className = 'comment-email';
-                h4CommentEmail.innerText = `${comments.email}`;
+                let commentE = document.createElement('h4');
+                commentE.className = 'comment_mail';
+                commentE.innerText = `${comments.email}`;
 
+                let commentP = document.createElement('p');
+                commentP.innerText = `${comments.body}`;
 
-                let pComment2 = document.createElement('p');
-                pComment2.className = 'body-comment';
-                pComment2.innerText = `${comments.body}`;
-
-                divComments.append(h3CommentName,h4CommentEmail,pComment2);
-                divWrapComments.append(divComments);
-
-            })))
+                divComments.append(commentH, commentE, commentP);
+                wrapComments.append(divComments);
+            })));
