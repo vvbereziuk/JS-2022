@@ -6,11 +6,11 @@
 // котра має детальну інфу про поточний пост.
 
 let url = new URL(location.href);
+
 let id = url.searchParams.get('id');
 
 let userInfo = document.createElement('div');
 userInfo.className = 'user_data';
-
 
 let divTitle = document.createElement('div');
 divTitle.className = 'title_data';
@@ -22,11 +22,12 @@ userInfo.append(titleH);
 
 let divWrap = document.createElement('div');
 divWrap.className = 'wrap';
-divWrap.append(userInfo,divTitle)
+
+divWrap.append(userInfo, divTitle);
 document.body.append(divWrap);
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .then(response => response.json())
+    .then(value => value.json())
     .then(obj =
         function arrayUsers(array) {
             for (const key in array) {
@@ -42,14 +43,15 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         }
     )
 
-    .then(resp =>
-    {let userButton = document.createElement('button');
+    .then(resp => {
+        let userButton = document.createElement('button');
         userButton.className = 'posts_title';
         userButton.innerText = 'Post of current users';
         userInfo.append(userButton);
+
         userButton.onclick = function () {
             fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-                .then(response => response.json())
+                .then(value => value.json())
                 .then(titlePosts => {
                         for (const titlePost of titlePosts) {
                             let titlePostDiv = document.createElement('div');
@@ -66,12 +68,13 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                             titlePostBtn.onclick = function () {
                                 document.location.href = `post-details.html?postId=${titlePost.id}`;
                             }
-                            titlePostDiv.append(titleP,titlePostBtn);
+                            titlePostDiv.append(titleP, titlePostBtn);
                             divTitle.append(titlePostDiv);
                             userButton.disabled = true;
                         }
                     }
                 )
-        }})
+        }
+    });
 
 

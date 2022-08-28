@@ -4,6 +4,7 @@
 //     - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
 
 let url = new URL(location.href);
+
 let postId = url.searchParams.get('postId');
 
 let divWrap = document.createElement('div');
