@@ -11,10 +11,10 @@ divWrap.className = 'wrap';
 document.body.appendChild(divWrap);
 
 let divWrapPost = document.createElement('div');
-divWrapPost.className = 'wrap-post';
+divWrapPost.className = 'head_post';
 
 let divWrapComments = document.createElement('div');
-divWrapComments.className = 'wrap-comments';
+divWrapComments.className = 'head_comments';
 
 divWrap.append(divWrapPost, divWrapComments);
 
@@ -26,7 +26,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 // let postDiv = document.createElement('div');
                 // postDiv.className = 'post';
 
-                let postH3 = document.createElement('h3');
+                let postH3 = document.createElement('h2');
                 postH3.className = 'post-title';
 
                 let postP2 = document.createElement('p');

@@ -43,11 +43,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     )
 
     .then(resp =>
-    {let userPostsTitleButton = document.createElement('button');
-        userPostsTitleButton.className = 'posts-title';
-        userPostsTitleButton.innerText = 'Post of current users';
-        userInfo.append(userPostsTitleButton);
-        userPostsTitleButton.onclick = function () {
+    {let userPostsButton = document.createElement('button');
+        userPostsButton.className = 'posts-title';
+        userPostsButton.innerText = 'Post of current users';
+        userInfo.append(userPostsButton);
+        userPostsButton.onclick = function () {
             fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                 .then(response => response.json())
                 .then(titlePosts => {
@@ -68,7 +68,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                             }
                             titlePostDiv.append(pTitlePost,titlePostBtn);
                             divTitle.append(titlePostDiv);
-                            userPostsTitleButton.disabled = true;
+                            userPostsButton.disabled = true;
                         }
                     }
                 )

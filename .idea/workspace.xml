@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87273ddb-e380-4bbc-bc7a-55bb34376611" name="Changes" comment="hw1">
-      <change afterPath="$PROJECT_DIR$/Demo/demo9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/css/post-details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/css/user-details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/js/post-details.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/js/user-details.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/post-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini-Project/user-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini-Project/css/post-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/Mini-Project/css/post-details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini-Project/js/post-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mini-Project/js/post-details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini-Project/js/user-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mini-Project/js/user-details.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +98,8 @@
       <workItem from="1661253013820" duration="4260000" />
       <workItem from="1661279166190" duration="13000" />
       <workItem from="1661445941643" duration="9524000" />
-      <workItem from="1661536488587" duration="18978000" />
+      <workItem from="1661536488587" duration="19265000" />
+      <workItem from="1661670272592" duration="3701000" />
     </task>
     <task id="LOCAL-00001" summary="hw1">
       <created>1658513829490</created>
@@ -241,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661254748097</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="hw1">
+      <created>1661626744667</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1661626744667</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

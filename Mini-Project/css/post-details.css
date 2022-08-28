@@ -1,47 +1,37 @@
 
-.wrap-post{
-    background: #498c12;
-    border: blueviolet solid 1px;
-    border-radius: 10px;
-    width: 33%;
-    padding-left: 15px;
-    margin-bottom: 15px;
+.head_post {
+    background: silver;
+    border: solid 3px;
+    width: 90%;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+
 }
 .post-title{
-    color: blueviolet;
-    font-family: Calibri;
     text-align: left;
 }
 
 .post-body {
-    color: blueviolet;
-    font-family: Calibri;
     text-align: justify;
 }
 
-.wrap-comments{
+.head_comments{
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
 }
 
 .comments {
-    font-family: Calibri;
-    background: azure;
+    background: orange;
     margin: 10px;
-    border: blueviolet solid 1px;
+    border: solid 3px;
     border-radius: 10px;
     width: 20%;
-    padding: 15px;
+    padding: 10px;
     height: 300px;
+
 }
 
-.comment-name{
-    font-family: Calibri;
+.comment-name, .comment-email{
     height: 15%;
-}
-
-.comment-email{
-    height: 10%;
-    font-family: Calibri;
 }
