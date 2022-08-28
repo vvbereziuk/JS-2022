@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87273ddb-e380-4bbc-bc7a-55bb34376611" name="Changes" comment="hw1">
-      <change beforePath="$PROJECT_DIR$/Mini-Project/css/post-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/Mini-Project/css/post-details.css" afterDir="false" />
-    </list>
+    <list default="true" id="87273ddb-e380-4bbc-bc7a-55bb34376611" name="Changes" comment="hw1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +94,7 @@
       <workItem from="1661279166190" duration="13000" />
       <workItem from="1661445941643" duration="9524000" />
       <workItem from="1661536488587" duration="19265000" />
-      <workItem from="1661670272592" duration="9462000" />
+      <workItem from="1661670272592" duration="9485000" />
     </task>
     <task id="LOCAL-00001" summary="hw1">
       <created>1658513829490</created>
@@ -259,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661720189596</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="hw1">
+      <created>1661720358214</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1661720358214</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
