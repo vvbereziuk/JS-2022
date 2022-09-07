@@ -15,17 +15,14 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="test@cluster0.dd4hvep.mongodb.net" uuid="2f1fd6e8-02da-4858-a6a2-39c5e9bcdc52">
+    <data-source name="test@cluster0.dd4hvep.mongodb.net" uuid="d346dac4-6972-4b99-ae61-9f519819b2a1">
       <database-info product="Mongo DB" version="5.0.12" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.15" dbms="MONGO" exact-version="5.0.12" exact-driver-version="1.15" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <user-name>MrValentin</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema">
-            <name qname="@" />
-            <name qname="test" />
-          </node>
+          <node kind="schema" qname="my-DB" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

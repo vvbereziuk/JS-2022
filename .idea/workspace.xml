@@ -50,9 +50,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.tabs"
   },
   "keyToStringList": {
@@ -121,7 +121,8 @@
       <workItem from="1662145925747" duration="543000" />
       <workItem from="1662184814188" duration="1062000" />
       <workItem from="1662228923289" duration="927000" />
-      <workItem from="1662485718834" duration="5806000" />
+      <workItem from="1662485718834" duration="6107000" />
+      <workItem from="1662570611427" duration="3676000" />
     </task>
     <task id="LOCAL-00001" summary="hw1">
       <created>1658513829490</created>
@@ -354,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662229778140</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="hw1">
+      <created>1662494191586</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1662494191586</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
