@@ -22,7 +22,7 @@
       <user-name>MrValentin</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="my-DB" />
+          <node kind="schema" qname="my-DB2" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
